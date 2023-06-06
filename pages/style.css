@@ -1,0 +1,36 @@
+body {
+  font-family: Sans-Serif;
+  display: block !important;
+}
+nav {
+  display: flex;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  background: lightgreen;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+h1 span {
+  background: lightblue;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main[data-pathname="/about"] .title,
+main:not([data-pathname="/about"]) nav a[href="/about"] {
+  view-transition-name: about;
+}
+
+main[data-pathname="/"] .title,
+main:not([data-pathname="/"]) a[href="/"] {
+  view-transition-name: home;
+}
