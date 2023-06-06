@@ -1,3 +1,3 @@
 export default function About() {
-  return <h1><span style={{viewTransitionName: "about"}}>About</span></h1>;
+  return <h1><span className="title">About</span></h1>;
 }
